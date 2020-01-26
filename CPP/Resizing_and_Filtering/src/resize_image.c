@@ -38,8 +38,8 @@ image nn_resize(image im, int w, int h)
             {
                 for(int j = 0; j < im.h; j++)
                 {
-                    float px = nn_interpolate(im, i*w_f, j*h_f, c);
-                    set_pixel(im_r, i*w_f, j*h_f, c, px);
+                    float px = nn_interpolate(im, i, j, c);
+                    set_pixel(im_r, floor((float)i*w_f), floor((float)j*h_f), c, px);
 
                 }
             }
